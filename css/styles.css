@@ -31,8 +31,8 @@ body {
    align-items: center;
    background-color: var(--LGB);
    color: var(--DDB);
-   height: 100vh;
    font-weight: 500;
+   /* height: 100vh; */
 }
 
 main,
@@ -50,6 +50,7 @@ article {
    padding-bottom: 15px;
    overflow: hidden;
    box-shadow: 7px 5px 11px 0px rgb(0 0 0 / 6%);
+   margin: 20px auto;
 }
 
 article header img {
@@ -211,8 +212,8 @@ aside a:hover:nth-of-type(3) img {
 /* footer  */
 
 footer {
-   position: absolute;
-   bottom: 0px;
+   position: relative;
+   bottom: -30px;
    width: 100%;
    padding: 10px;
    background-color: var(--GB);
@@ -235,7 +236,23 @@ footer {
 
 /* media queries  */
 
+@media (min-height: 40em) {
+   body {
+      height: 100vh;
+   }
+
+   footer {
+      position: absolute;
+      bottom: 0;
+   }
+}
+
 @media (min-width: 56.25em) {
+
+   body {
+      height: 100vh;
+   }
+
    article {
       max-width: 730px;
       height: 280px;
@@ -307,5 +324,10 @@ footer {
       font-weight: 600;
       z-index: 1;
       height: 1px;
+   }
+
+   footer {
+      position: absolute;
+      bottom: 0;
    }
 }
